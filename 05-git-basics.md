@@ -1,8 +1,8 @@
 # Git Basics
 
-## Setup Git Repository (local)
+## 01. Setup Git Repository (local)
 
-### Step-XX: Create a project folder/directory
+### 1.1 Create a project folder/directory
 
 - Git works by checking for changes to files within a certain _folder or a directory_.
 - So let's create a folder to serve as our project directory and let Git know about it, so it can start tracking changes.
@@ -16,7 +16,7 @@
   cd <DIRECTORY_NAME>
   ```
 
-### Step-XX: `Initialize` the project folder as Git repo - `git init`
+### 1.2 `Initialize` the project folder as Git repo - `git init`
 
 - Now, initialize your new repository and set the name of the default branch to main:
 
@@ -38,7 +38,7 @@ Initialized empty Git repository in /home/<user>/repository_name/.git/ </br>
   Switched to a new branch 'main'
 ```
 
-### Step-XX: Check the Git Repository status - `git status`
+### 1.3 Check the Git Repository status - `git status`
 
 - Now, use a `git status` command to show the status of the working tree:
 - git status gives information on the current status of a git repository and it's contents.
@@ -47,19 +47,19 @@ Initialized empty Git repository in /home/<user>/repository_name/.git/ </br>
 git status
 ```
 
-## Understanding `.git` folder (hidden)
+## 02. Understanding `.git` folder (hidden)
 
 - `git init` command creates an empty repository - basically a `.git` directory (hidden) with subdirectories for objects, refs/heads, refs/tags, and template files.
 - An initial branch without any commits will be created.
 - If you want to initialize a repo and at the same time create an initial branch, use `--initial-branch` option, as follows:
 
-## `Git Workflow` - Work on stuff >> Stage it >> Commit it
+## 03. `Git Workflow` - Work on stuff >> Stage it >> Commit it
 
-### Start a new Project folder/directory
+### 3.1 Start a new Project folder/directory
 
 - Create a new folder/directory for application files, say **MyFirstApp**.
 
-### Initilize the Repository - `git init`
+### 3.2 Initilize the Repository - `git init`
 
 ```
 # Get inside above created folder
@@ -72,17 +72,17 @@ git init
 git init --initial-branch=<NEW_BRANCH_NAME>
 ```
 
-### Add the code files to the Project directory
+### 3.3 Add the code files to the Project directory
 
 - Create few app files (e.g. html, css) in the project folder and save it.
 
-### Check the Status of a Repo - `git status`
+### 3.4 Check the Status of a Repo - `git status`
 
 ```
 git status
 ```
 
-### Stage the changes - `git add`
+### 3.5 Stage the changes - `git add`
 
 ```
 # To stage all the untracked changes
@@ -92,7 +92,7 @@ git add .
 git add <UNTRACKED_FILE_01_NAME> <UNTRACKED_FILE_02_NAME>
 ```
 
-### (Optional) Unstage the changes - reset | restore | rm
+### 3.6 (Optional) Unstage the changes - reset | restore | rm
 
 - You can unstage a file in the Git index and undo a git add operation, any of the following three commands will work:
 
@@ -126,7 +126,7 @@ git add <UNTRACKED_FILE_01_NAME> <UNTRACKED_FILE_02_NAME>
   git restore --staged .
   ```
 
-### Commit the changes - git commit
+### 3.7 Commit the changes - git commit
 
 - Commit the changes which are staged before.
 
@@ -134,7 +134,7 @@ git add <UNTRACKED_FILE_01_NAME> <UNTRACKED_FILE_02_NAME>
 git commit -m "Start app development"
 ```
 
-### For getting the list of all the commits - `git log`
+### 3.8 For getting the list of all the commits - `git log`
 
 ```
 git log
@@ -143,3 +143,38 @@ git log --oneline
 
 git log --all
 ```
+
+## Hands-on Excersice - Committing changes using Git
+
+1. Create a new folder called `Shopping`
+2. Initialize the `Shopping` folder as a Git repo (make sure you are inside of a Git repo)
+3. Create a new file called `yard.txt`
+4. Create another new file called `groceries.txt`
+5. Commit both the empty files. The message should be "create yard and groceries lists"
+6. In the `yard.txt` file, add the following text:
+
+```
+- 2 bags of potting soil
+- 1 bag of worm castings
+```
+
+7. In the groceries.txt file, add the following:
+
+```
+- 4 tomatoes
+- 6 shallots
+- 1 fennel bulb
+```
+
+8. Make a new commit, including **ONLY the changes from the `groceries.txt` file.** The commit message should be "add ingredients for tomato soup"
+9. Make a second commit including **ONLY the changes to the `yard.txt` file.** It should have the commit message "add items needed for garden box"
+10. Next up, add the following line to the end of `groceries.txt`
+11. In the yard.txt file, change the first line so that it says "3 bags of potting soil" instead of "2 bags of potting soil"
+12. **Make a commit that includes the changes to BOTH files.** The message should read "add items needed to grow potatoes"
+13. **Use a Git command to display a list of the commits. You should see 4!**
+
+## 04. One Commit for One type of change - Keep commits Atomic
+
+## 05. Committing the changes using Git GUI Client (GitKraken/SourceTree/GitHub Desktop)
+
+## 06. Modify the most recent commit - `git commit --ammend`

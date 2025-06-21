@@ -16,7 +16,7 @@
 - HEAD is simply a pointer that refers to the current "location" in the repository.
 - It points/refers to a particular branch reference.
 
-## 04. Working with the Branches
+## 04. Working with the `Branches`
 
 ### View all the Branches - `git branch`
 
@@ -31,6 +31,8 @@ git branch
 ```
 # Syntax - To create a new branch
 git branch <BRANCH_NAME>
+OR
+git checkout <BRANCH_NAME>
 
 # Examples
 git branch development
@@ -39,6 +41,12 @@ git branch bugfix
 
 # Create a branch & switch to it
 git switch -c <BRANCH_NAME>
+git switch -c integration
+
+OR
+
+git checkout -b <BRANCH_NAME>
+git checkout -b integration
 ```
 
 - **Switch to other branch** - `git switch` & `git checkout`
@@ -53,7 +61,7 @@ git switch <BRANCH_NAME_TO_SWITCH_TO>
 git checkout <BRANCH_NAME_TO_SWITCH_TO>
 ```
 
-## Deleting and Renaming Branches
+## 05. Deleting and Renaming Branches
 
 - **Delete a Branch**
 
@@ -84,3 +92,7 @@ git checkout <BRANCH_NAME>
 # Rename the branch
 git branch -m <BRANCH_NAME>
 ```
+
+## 06. Switching Branches with unstaged changes
+
+## Hands-on Excersice - Git Branches
