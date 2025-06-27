@@ -4,7 +4,11 @@
 
 - git diff command can be used to view the changes between commits, branches, files, working directory and more.
 
-## 02. Understand how git diff works
+## 02. Understand how the `git diff` works
+
+### 2.1 `git diff` - Viewing unstaged changes
+
+- Compare untracked changes with working directory
 
 ```
 # Create a new directory
@@ -39,3 +43,7 @@ git diff
 # Now, again check the difference
 git diff
 ```
+
+### 2.2 `git diff HEAD` - Viewing working directory changes
+
+- For listing all the changes in working tree since last commit.
