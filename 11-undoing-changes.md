@@ -35,7 +35,7 @@ Now, you will have couple of options to fix the detached HEAD problem:
 
 3. Create a new branch and switch to it. The HEAD will be no longer in detached state.
 
-### 1.1 Re-attaching HEAD to a branch (e.g. master)
+### 1.1 Re-attaching `HEAD` to a branch (e.g. master)
 
 ```
 [Make sure HEAD is in the detached state]
@@ -66,6 +66,15 @@ git add .
 git commit -m "commit msg"
 ```
 
-## 02. Unstaging changes - **git restore**
+## 02. Discarding changes with `git checkout`
 
-## 03. Undoing commits - **git reset**
+- Let's say you made some changes to a file and you do not want to keep them.
+- To revert all the new changes you made to your last commit, you can use:
+
+```
+git checkout HEAD <filename>
+```
+
+## 03. Unstaging changes with `git restore`
+
+## 04. Undoing commits - **git reset**

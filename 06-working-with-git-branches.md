@@ -92,7 +92,3 @@ git checkout <BRANCH_NAME>
 # Rename the branch
 git branch -m <BRANCH_NAME>
 ```
-
-## 06. Switching Branches with unstaged changes
-
-## Hands-on Excersice - Git Branches
